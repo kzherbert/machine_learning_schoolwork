@@ -1,0 +1,78 @@
+=== Run information ===
+
+Scheme:       weka.clusterers.SimpleKMeans -init 0 -max-candidates 100 -periodic-pruning 10000 -min-density 2.0 -t1 -1.25 -t2 -1.0 -N 6 -A "weka.core.EuclideanDistance -R first-last" -I 500 -num-slots 1 -S 10
+Relation:     iris
+Instances:    150
+Attributes:   5
+              sepallength
+              sepalwidth
+              petallength
+              petalwidth
+Ignored:
+              class
+Test mode:    Classes to clusters evaluation on training data
+
+=== Clustering model (full training set) ===
+
+
+kMeans
+======
+
+Number of iterations: 7
+Within cluster sum of squared errors: 4.687015166064156
+
+Initial starting points (random):
+
+Cluster 0: 6.1,2.9,4.7,1.4
+Cluster 1: 6.2,2.9,4.3,1.3
+Cluster 2: 6.9,3.1,5.1,2.3
+Cluster 3: 5.5,4.2,1.4,0.2
+Cluster 4: 6.9,3.1,4.9,1.5
+Cluster 5: 6.1,3,4.6,1.4
+
+Missing values globally replaced with mean/mode
+
+Final cluster centroids:
+                           Cluster#
+Attribute      Full Data          0          1          2          3          4          5
+                 (150.0)     (22.0)     (19.0)     (25.0)     (50.0)     (16.0)     (18.0)
+==========================================================================================
+sepallength       5.8433     6.1273     5.4842      7.012      5.006     6.6313     5.8778
+sepalwidth         3.054        2.7     2.4684      3.164      3.418     3.0375     2.9556
+petallength       3.7587     5.1318     3.8632      5.908      1.464     4.8937       4.35
+petalwidth        1.1987     1.8364     1.1684      2.204      0.244     1.5563     1.3889
+
+
+
+
+Time taken to build model (full training data) : 0 seconds
+
+=== Model and evaluation on training set ===
+
+Clustered Instances
+
+0       22 ( 15%)
+1       19 ( 13%)
+2       25 ( 17%)
+3       50 ( 33%)
+4       16 ( 11%)
+5       18 ( 12%)
+
+
+Class attribute: class
+Classes to Clusters:
+
+  0  1  2  3  4  5  <-- assigned to cluster
+  0  0  0 50  0  0 | Iris-setosa
+  3 18  0  0 11 18 | Iris-versicolor
+ 19  1 25  0  5  0 | Iris-virginica
+
+Cluster 0 <-- No class
+Cluster 1 <-- No class
+Cluster 2 <-- Iris-virginica
+Cluster 3 <-- Iris-setosa
+Cluster 4 <-- No class
+Cluster 5 <-- Iris-versicolor
+
+Incorrectly clustered instances :	57.0	 38      %
+
